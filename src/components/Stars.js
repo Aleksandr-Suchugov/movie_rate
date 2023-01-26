@@ -8,14 +8,14 @@ export default function Stars(props) {
     return null;
   }
 
-  const movieRate = [];
-  for (let i = 0; i < count; i += 1) {
-    movieRate.push(1);
-  }
+  // const movieRate = [];
+  // for (let i = 0; i < count; i += 1) {
+  //   movieRate.push(1);
+  // }
 
   return (
     <ul className="card-body-stars u-clearfix">
-      {movieRate.map((itemStar, idx) => <li key={idx}><Star /></li>)}
+      {Array(count).fill().map((itemStar, idx) => <li key={idx}><Star /></li>)}
     </ul>
   );
 }
